@@ -4,6 +4,6 @@ export default axios.create({
   baseURL: 'https://api.unsplash.com',
   headers: {
     Authorization:
-      'Client-ID 34e39e5c2f447ce52009a515846ca2b6ccc35552bb63de59cf4a6d06728f3f7e'
+      'Client-ID e3bf7a7d3b06421a94b6558b85242522e9169bdda6840eb1631b9ed4e4354d22'
   }
 });
