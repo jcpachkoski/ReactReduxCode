@@ -1,5 +1,6 @@
 import React from 'react';
 
+// This component displays the passed in video, using it's videoId, in an iframe.
 const VideoDetail = ({ video }) => {
   if (!video) {
     return <div>Loading...</div>;
