@@ -1,3 +1,4 @@
+import './VideoList.css';
 import React from 'react';
 import VideoItem from './VideoItem';
 
@@ -14,7 +15,7 @@ const VideoList = ({ videos, onVideoSelectedCallback }) => {
     );
   });
 
-  return <div className="ui relaxed divided list">{renderedList}</div>;
+  return <div className="ui relaxed divided list scroller">{renderedList}</div>;
 };
 
 export default VideoList;
