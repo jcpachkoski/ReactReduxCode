@@ -16,9 +16,9 @@ class App extends React.Component {
   // OnSearchSubmittedCallback is the prop thats holds/points to this method.  We could have named
   // it anything we wanted but I used past tense and callback in the name to make it self-explanatory.
   // When a search term is entered in the SearchBar and enter is pressed to submit it, this method
-  // is called with the searchTerm and the API is called to get data. Afterwards, setState is called, below,
-  // which changes the state of this App component.  The change in state causes this App component and
-  // the children components to re-render.
+  // is called with the searchTerm and the API is called to get data. Afterwards, setState is called,
+  // below, which changes the state of this App component.  The change in state causes this App component
+  // and the children components to re-render.
   onSearchTermSubmit = async searchTerm => {
     const response = await youtube.get('/search', {
       params: {
