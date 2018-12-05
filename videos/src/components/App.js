@@ -29,7 +29,7 @@ class App extends React.Component {
     // Note that, initially, the component will display with the first video found since we set
     // selectedVideo: response.data.items[0]
     this.setState({
-      videos: response.data.items,
+      videos: response.data.items.filter(item => item.id.videoId !== undefined),
       selectedVideo: response.data.items[0]
     });
   };

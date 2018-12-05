@@ -12,7 +12,7 @@ const VideoDetail = ({ video }) => {
     <div>
       <div className="ui embed">
         <iframe
-        width="560" height="315" title="video player" src={videoSrc} frameborder="0" allowFullScreen
+        width="560" height="315" title="video player" src={videoSrc} frameBorder="0" allowFullScreen
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         />
       </div>

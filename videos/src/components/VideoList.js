@@ -14,7 +14,7 @@ const VideoList = ({ videos, onVideoSelectedCallback }) => {
       />
     );
   });
-
+  
   return <div className="ui relaxed divided list scroller">{renderedList}</div>;
 };
 
