@@ -26,11 +26,24 @@ class App extends React.Component {
       }
     });
 
+    // Prevents the bug where the channels page picture was loading, which does not have a video to play or a videoId.
+    // This was causing a black screen to load and an error when pressing play.  This addes a variable that creates an
+    // array of responses that only have a videoId as well. This cleans up the state and removes any responses that don't have a videoId.
+    // Now if you search for channels their channel display won't pop up, only their videos will, thus removing the bug of loading up a
+    // non-playable "video" in the iframe.
+    const setSelectedVideo = response.data.items.filter(item => {
+      if(item.id.videoId !== undefined){
+        return item.id.videoId;
+      } else{
+        return false;
+      }
+    });
+    
     // Note that, initially, the component will display with the first video found since we set
     // selectedVideo: response.data.items[0]
     this.setState({
       videos: response.data.items.filter(item => item.id.videoId !== undefined),
-      selectedVideo: response.data.items[0]
+      selectedVideo: setSelectedVideo[0]
     });
   };
 
