@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 
+// Here, we are just using a static list of songs.
 const songsReducer = () => {
   return [
     { title: 'No Scrubs', duration: '4:05' },

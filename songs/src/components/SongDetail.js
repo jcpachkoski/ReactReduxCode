@@ -18,6 +18,12 @@ const SongDetail = ({ song }) => {
   );
 };
 
+// This takes in the entire state object.
+// Note that the combineReducers named the property
+// selectedSong: selectedSongReducer
+// so we use state.selectedSong
+// to get it from state.
+// We return song but could have named it whatever we wanted.
 const mapStateToProps = state => {
   return { song: state.selectedSong };
 };
