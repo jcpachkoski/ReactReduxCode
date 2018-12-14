@@ -46,6 +46,8 @@ const mapStateToProps = state => {
 // We also pass in an action creator, selectSong, so we can change the state of the Redux store.
 // The action creator will show up in props as this.props.selectSong
 // connect passes the seleect song action creator into the dispatch function.
+// Note: If had more than one action creator that you needed to call, it would be this, for exmaple
+// { selectSong, whatever }
 export default connect(
   mapStateToProps,
   { selectSong }
