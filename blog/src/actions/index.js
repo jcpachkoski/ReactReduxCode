@@ -16,6 +16,8 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
 
 // When using async, await, need to do it this way.
 // We use thunk middleware to help us do this.
+// So, we don't get [] as first render in componentDidMount, be
+// sure to use response.data, not just response, below.
 export const fetchPosts = () => async dispatch => {
   const response = await jsonPlaceholder.get('/posts');
 

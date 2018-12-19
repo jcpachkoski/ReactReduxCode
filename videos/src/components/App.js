@@ -57,11 +57,13 @@ class App extends React.Component {
     this.setState({ selectedVideo: video });
   };
 
+  // I did the research for semantic-ui, so the videos application will look good on both desktop and mobile devices.
+  // Be sure to make the grid stackable, below.
   render() {
     return (
       <div className="ui container" style={{ marginTop: '10px' }}>
         <SearchBar onSearchSubmittedCallback={this.onSearchTermSubmit} />
-        <div className="ui grid">
+        <div className="ui stackable grid">
           <div className="ui row">
             <div className="eleven wide column">
               <VideoDetail video={this.state.selectedVideo} />

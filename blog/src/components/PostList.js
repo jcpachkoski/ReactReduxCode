@@ -30,6 +30,8 @@ class PostList extends React.Component {
   }
 }
 
+// Note: The file reducers/index.js combineReducers function assigned like this posts: postsReducer, so
+// our state object has state.posts property in it which holds all of the data our reducer returned.
 const mapStateToProps = state => {
   return { posts: state.posts };
 };
